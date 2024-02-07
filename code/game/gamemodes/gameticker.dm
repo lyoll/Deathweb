@@ -191,21 +191,21 @@ var/turf/MiniSpawn
 	if (!src.mode.can_start())
 		//world << "<B>Unable to start [mode.name].</B> Not enough victims, [mode.required_players] victims are required. Reverting to pre-simulation lobby."
 		var/baron = "badmood"
-		var/bishop = "badmood"
-		var/merchant = "badmood"
+//		var/bishop = "badmood"
+//		var/merchant = "badmood"
 		for(var/mob/new_player/NN in player_list)
 			if(NN.client.work_chosen == "Baron" && NN.ready)
 				baron = "hit"
-			else if(NN.client.work_chosen == "Vicar" && NN.ready)
+/*			else if(NN.client.work_chosen == "Vicar" && NN.ready)
 				bishop = "hit"
 			else if(NN.client.work_chosen == "Merchant" && NN.ready)
-				merchant = "hit"
+				merchant = "hit" */
 
 		if(master_mode == "holywar")
 			to_chat(world,"<b><span class='highlighttext'>Crusade aborted:</span></b> We need <span class='bname'>20 soldiers</span>!")
 			to_chat(world,"<b><span class='bname'>10 Thanatis</span> and <span class='bname'>10 Post-Christians</span>!")
 		else
-			to_chat(world,"<b><span class='hitbold'>Story aborted:</span></b><span class='hit'> The fortress needs a generous </span><span class='[merchant]'><b>Merchant</b></span>,<span class='hit'> a just </span><span class='[baron]'><b>Baron</b></span><span class='hit'> and a pious </span><span class='[bishop]'><b>Vicar</b></span><span class='hit'>!</span>")
+			to_chat(world,"<b><span class='hitbold'>Story aborted:</span></b><span class='hit'> The fortress needs a just </span><span class='[baron]'><b>Baron</b></span>")
 		qdel(mode)
 		first_timer = FALSE
 		current_state = GAME_STATE_PREGAME

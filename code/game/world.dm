@@ -174,8 +174,8 @@ var/rtlog_path
 	var/s = ""
 	s += "<b>[vessel_name()]</b> &#8212; "
 	s += " ("
-	s += "<a href=\"https://discord.gg/XXX\">" //Change this to wherever you want the hub to link to.
-	s += "Dungeon"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "<a href=\"https://discord.gg/zR2Kc9SpGg\">" //Change this to wherever you want the hub to link to.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -190,14 +190,14 @@ var/rtlog_path
 		features += "~[n] addicts"
 	else if (n > 0)
 		features += "~[n] addict"
-
+	features += "<b>IZONE</b>"
 	features += "<b>+\[18\]</b>"
 
 	if (features)
 		s += "<br>[list2text(features, ", ")]"
 	s += "<br><b>Server:</b> [src.port]"
-	s += "<br><b>Map of the Week:</b> [currentmaprotation]"
-	s += "<br><b>Hosted by:</b> [config.hostedby]"
+//	s += "<br><b>Map of the Week:</b> [currentmaprotation]"
+//	s += "<br><b>Hosted by:</b> [config.hostedby]"
 	if(!private_party)
 		s += "<br><b>PUBLIC PARTY</b>"
 	if(master_mode == "holywar")

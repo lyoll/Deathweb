@@ -130,9 +130,9 @@
 	var/on_state = "fireplace1"
 	var/off_state = "fireplace0"
 	var/fire_left = null //tempo até apagar
-	var/obj/particleMain = null
-	var/particlePath = /obj/particles/fireplace
-	var/loop = 1 //1 = max / -1 = min
+//	var/obj/particleMain = null
+//	var/particlePath = /obj/particles/fireplace
+//	var/loop = 1 //1 = max / -1 = min
 
 /obj/structure/fireplace/New()
 	. = ..()
@@ -171,7 +171,7 @@
 			set_light(r_range, f_force, c_color)
 			return
 	*/
-
+/*
 /obj/particles
 	var/mainParticle = null
 	vis_flags = VIS_INHERIT_PLANE
@@ -197,27 +197,27 @@
 	src.filters += list(filter(type = "outline", size = 0.1, color = "#FF3300"), filter(type = "bloom", threshold = rgb(255, 128, 255), size = 3, offset = 2, alpha = 255))
 	particles += F
 	mainParticle = F
-
+*/
 /obj/structure/fireplace/proc/turn_on()
 	playsound(src.loc, 'sound/effects/torch_light.ogg', 50, 1)
 	icon_state = on_state
 	set_light(r_range, f_force, c_color)
 	fire_left = rand(38 MINUTES, 48 MINUTES)
-	lit = 1
+	lit = 1 /*
 	if(!particleMain && ispath(particlePath))
 		particleMain = new particlePath(src.loc)
 	var/obj/particles/fireplace/P = particleMain
 	if(P)
-		P.mainParticle:spawning = 1
+		P.mainParticle:spawning = 1 */
 
 /obj/structure/fireplace/proc/turn_off()
 	playsound(src.loc, 'sound/effects/torch_snuff.ogg', 75, 1)
 	icon_state = off_state
 	set_light(0)
-	lit = 0
+	lit = 0 /*
 	var/obj/particles/fireplace/P = particleMain
 	if(P)
-		P.mainParticle:spawning = 0
+		P.mainParticle:spawning = 0 */
 
 /obj/structure/fireplace/attackby(var/obj/item/I, var/mob/user)
 	if(istype(I, /obj/item/flame))
@@ -242,12 +242,12 @@
 	icon_state = "fireplace20"
 	on_state =  "fireplace21"
 	off_state = "fireplace20"
-	particlePath = /obj/particles/fireplace2
+/*	particlePath = /obj/particles/fireplace2
 
 /obj/structure/fireplace/alt/New()
 	..()
 	particleMain.pixel_x = 3
-
+*/
 /obj/structure/fireplace/alt2
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "pyreplace0"
@@ -256,19 +256,19 @@
 	c_color = "#ff7a7a"
 	f_force = 7
 	r_range = 6
-	particlePath = /obj/particles/fireplace2
+//	particlePath = /obj/particles/fireplace2
 
-/obj/structure/fireplace/alt2/New()
+/* /obj/structure/fireplace/alt2/New()
 	..()
 	particleMain.pixel_x = 1
-
+*/
 /obj/structure/fireplace/wallplace
 	on_state = "wfireplace1"
 	off_state = "wfireplace0"
 	icon_state = "wfireplace0"
 	density = 0
 	plane = 21
-	particlePath = null
+//	particlePath = null
 
 /obj/structure/fireplace/wallplace/north
 	pixel_y = 22

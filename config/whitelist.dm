@@ -2,7 +2,7 @@
 
 var/global/list/ckeywhitelistweb = list()
 
-var/global/private_party = TRUE // Dictates whether whitelist is needed to join or not
+var/global/private_party = FALSE // Dictates whether whitelist is needed to join or not
 
 var/global/list/proxyignore = list()
 

@@ -6,13 +6,14 @@
 teste.bat
 info.json
 /config/moderators.txt
+/config/dbconfig.txt
+/config/whitelist.txt
 /statistics
 /deletions
 /data/logs
 /data/player_saves
 /data/ban_unban_log.txt
 /data/investigate
-config/admins.txt
 data/banlist.bdb
 data/game_version.sav
 /nodejs/

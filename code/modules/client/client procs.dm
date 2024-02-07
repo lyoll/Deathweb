@@ -21,7 +21,7 @@
 	If you have any  questions about this stuff feel free to ask. ~Carn
 	*/
 
-var/global/max_players = 100
+var/global/max_players = 40
 
 /client/Topic(href, href_list, hsrc)
 	if(!usr || usr != mob)	//stops us calling Topic for somebody else's client. Also helps prevent usr=null
@@ -186,7 +186,7 @@ var/global/max_players = 100
 				notInvited()
 				return
 		if(FALSE)
-			if(!ckeywhitelistweb.Find(src.ckey) && text2num(copytext(src.JoinDate, 1, 5)) >= 2020)
+			if(!ckeywhitelistweb.Find(src.ckey) && text2num(copytext(src.JoinDate, 1, 5)) >= 2026)
 				notInvited()
 				return
 

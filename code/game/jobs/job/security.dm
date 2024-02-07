@@ -198,7 +198,7 @@
 	jobdesc = "Serving as both the village´s watchman and lawman, you are the first person to know of any impending threat to Enoch´s Gate. You once used to patrol the caves, watching the migrants roll into what later became the village. Now? You are redelegated to following the Magistrate´s orders and enforcing a semblance of law in the Village. Maybe one day you might end up getting promoted to the guard, but until that comes, you atleast have a comfortable office."
 	sex_lock = MALE
 	money = 25
-	latejoin_locked = TRUE
+	latejoin_locked = FALSE
 	thanati_chance = 10
 	skill_mods = list(
 	list(SKILL_MELEE,2,2),
@@ -344,11 +344,11 @@ var/global/Gatekeeper_Type = "Null"
 	supervisors = "the Baron and the Marduk"
 	selection_color = "#ffeeee"
 	idtype = /obj/item/card/id/other
-	access = list(garrison,keep,courtroom)
-	minimal_access = list(garrison,keep,courtroom)
+	access = list(garrison,keep,courtroom,geschef)
+	minimal_access = list(garrison,keep,courtroom,geschef)
 	minimal_player_age = 3
 	sex_lock = MALE
-	latejoin_locked = TRUE
+	latejoin_locked = FALSE
 	money = 13
 	thanati_chance = 1
 	jobdesc = " Gatekeeper to the Barons Fort. Dungeon Master. Armourer of the Triton Guard. The Charybdis is all of these at once. His nightly duty is to watch the keeps gates, ensuring the smerds dont just wander in when they please while letting the Tritons and nobility in and out as often as they want.  And who better to watch the Dungeon and guard the armory, than the one that has to sit atop both for hours on end?"

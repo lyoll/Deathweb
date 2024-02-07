@@ -107,7 +107,7 @@ client/proc/game_remove_whitelist(var/reason = "", var/stickyban = TRUE) // Used
 	return
 
 /proc/remove_ban()
-    var/list/current_bans = list()
+ /*   var/list/current_bans = list()
     var/DBQuery/bandb = dbcon.NewQuery("SELECT ckey FROM bansfarweb WHERE isbanned = 1;")
     if(!bandb.Execute())
         world.log << bandb.ErrorMsg()
@@ -119,7 +119,8 @@ client/proc/game_remove_whitelist(var/reason = "", var/stickyban = TRUE) // Used
     if(!banset.Execute())
         world.log << banset.ErrorMsg()
         return
-    bans.Remove(ckey)
+    bans.Remove(ckey) */
+    var/ckey = input(usr, "Which ckey do you want to unban?", "Nearweb") as null|text
     remove_stickyban(ckey)
     to_chat(usr, "<span class='highlighttext'>[ckey] has been unbanned.</span>")
     return

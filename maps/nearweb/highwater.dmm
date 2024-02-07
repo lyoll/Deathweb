@@ -39024,6 +39024,15 @@
 	dir = 1
 	},
 /area/dunwell/station/residential)
+"rYl" = (
+/obj/machinery/charon{
+	pixel_x = -4
+	},
+/turf/simulated/floor/lifewebe{
+	dir = 10;
+	icon_state = "22"
+	},
+/area/dunwell/station/bridge/hangar)
 "rYB" = (
 /obj/machinery/artemis/randomico,
 /turf/simulated/floor/lifeweb/plaza,
@@ -216311,7 +216320,7 @@ aao
 aao
 aao
 azu
-atj
+rYl
 atj
 atj
 atj

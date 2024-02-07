@@ -8,7 +8,7 @@
 	r_range = 4
 	density = 0
 	var/comesoff = 1
-	particlePath = null
+//	particlePath = null
 
 /obj/structure/fireplace/hearth/New()
 	..()

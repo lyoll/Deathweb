@@ -47,6 +47,8 @@ var/religion_name = null
 	return vessel_name
 
 /proc/world_name()
+	var/name = "\[ENG/RUS\] Trailweb: †Nearweb† code. NO-WL."
+/*
 	var/name = "Deathweb†: "
 	name += pick("Murder", "Love", "Kill the", "Love the","Kidnap the","Castrate the","Save","Deadly", "Paranoid", "Unidentified",
 	"Skeleton", "Communist", "Dead","Sleeping","Thirsty","Hungry",
@@ -60,7 +62,7 @@ var/religion_name = null
 	"Witch","Lodge","Graga","Rat","Beast","Demon","Chimera","God","Inquisitor","Soup","Bees","Consyte","Bishop","Sheriff",
 	"Lovers","Night","Grue","Darkness","Fortress","Corpse","Torch","Underground","Ambush","Invader","Vampire","Night","Heretic",
 	"Church","Icon","Dream","Flesh","Weakness","Revelation","Order","Saint","Web","Past","Present","Future","Victim","Liar","Plotters","Nightmare",	"Cold","Caves","Ghost")
-
+*/
 	world.name = name
 
 	vessel_name = name

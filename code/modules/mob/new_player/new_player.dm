@@ -425,7 +425,7 @@ var/aspects_max = 3
 		var/dat = "<html><Title>Nearweb</title><style type='text/css'>body {font-family: Times;cursor: url('http://lfwb.ru/Icons/pointer.cur'), auto;}a {text-decoration:none;outline: none;border: none;margin:-1px;}a:focus{outline:none;}a:hover {color:#0d0d0d;background:#505055;border: none;outline: none;border: none;}a.active { text-decoration:none; color:#533333;border: none;}a.inactive:hover {color:#0d0d0d;background:#bb0000;border: none;}a.active:hover {color:#bb0000;background:#0f0f0f;border: none;}a.inactive:hover { text-decoration:none; color:#0d0d0d; background:#bb0000}</style><body background bgColor=#0d0d0d text=#555555 alink=#777777 vlink=#777777 link=#777777>"
 		dat += "Game Duration: [round(hours)]h [round(mins)]m<br>"
 		dat += "Choose your fate:<br>"
-		var/list/allowedFatesList = list("Migrant","Bum","Servant","Nun","Maid","Urchin","Tribunal Veteran","Madam","Soiler","Misero","Merchant","Docker","Vicar","Sniffer","Amuser","Pusher","Apprentice","Butler","Sitzfrau","Sniffer","Consyte","Scuff","Mortus","Guest","Fortune Teller", "Boozehound", "Ganger")
+		var/list/allowedFatesList = list("Heir","Merchant","Magistrate","Minor Worker","Vicar","Praetor","Sniffer","Sheriff","Charybdis","Successor","Baroness","Meister","Treasurer","Migrant","Bum","Servant","Nun","Maid","Urchin","Tribunal Veteran","Madam","Soiler","Misero","Merchant","Docker","Vicar","Sniffer","Amuser","Pusher","Apprentice","Butler","Sitzfrau","Sniffer","Consyte","Scuff","Mortus","Guest","Fortune Teller", "Boozehound", "Ganger")
 		if(donation_mercenary.Find(src.client.ckey))
 			allowedFatesList.Add("Mercenary")
 		for(var/datum/job/job in job_master.occupations)

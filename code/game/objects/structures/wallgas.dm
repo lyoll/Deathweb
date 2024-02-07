@@ -23,8 +23,8 @@
 	var/particles/gas/F = new
 	src.pixel_y = 12
 	src.plane = 22
-	particles += F
-	mainParticle = F
+//	particles += F
+//	mainParticle = F
 
 particles/gas
 	width = 100

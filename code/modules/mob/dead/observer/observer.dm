@@ -396,12 +396,12 @@ var/list/usedremig = list()
 			pluralcheck = " [deathtimeminutes] minutes and"
 		var/deathtimeseconds = round((deathtime - deathtimeminutes * 600) / 10,1)
 		usr << "You have been dead for [pluralcheck] [deathtimeseconds] seconds."
-
+/*
 		if(mind.current)
 			if(!mind.current.buried && !mind.current.crucified && mind.current.loc != /obj/structure/closet/coffin) //If our current body is destroyed (incinerator etc.) it copunts as buried
 				to_chat(src, "Your body is not buried nor destroyed.")
 				return
-
+*/
 		log_game("[usr.name]/[usr.key] used abandon mob.")
 
 		to_chat(src, " <B>Make sure to play a different personality!</B>")
