@@ -437,7 +437,7 @@ obj/machinery/nuclearbomb/proc/nukehack_win(mob/user as mob)
 
 				sleep(300)
 				log_game("Rebooting due to nuclear detonation")
-				world.Reboot()
+				qdel(world)
 				return
 	return
 

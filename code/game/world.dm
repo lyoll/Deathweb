@@ -136,8 +136,7 @@ var/rtlog_path
 	add_story_id()
 	for(var/client/C in clients)
 		C << link("byond://[world.address]:[world.port]")
-	TgsReboot()
-	TgsEndProcess()
+	qdel(world)
 	..(reason)
 
 /hook/startup/proc/loadMode()

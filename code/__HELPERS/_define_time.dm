@@ -6,7 +6,7 @@
 	game_log("DD_OUTPUT", text)
 
 // Comment this out if the external btime library is unavailable
-#define PRECISE_TIMER_AVAILABLE
+// #define PRECISE_TIMER_AVAILABLE
 
 #ifdef PRECISE_TIMER_AVAILABLE
 var/global/__btime__libName = "btime.[world.system_type==MS_WINDOWS?"dll":"so"]"

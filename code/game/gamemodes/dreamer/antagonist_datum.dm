@@ -119,7 +119,7 @@ var/starringlist = ""
 			sleep(ticker.restart_timeout)
 			if(!ticker.delay_end)
 				to_chat(world, "Your fortress has been abandoned.")
-				world.Reboot()
+				qdel(world)
 			else
 				to_chat(world,"\blue <B>An admin has delayed the round end</B>")
 		else

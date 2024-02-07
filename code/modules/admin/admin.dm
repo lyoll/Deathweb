@@ -688,7 +688,7 @@ var/global/log_adminsay = 1
 		to_chat(world, "\red <b>Restarting world!</b> \blue Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!")
 		log_admin("[key_name(usr)] initiated a reboot.")
 		sleep(50)
-		world.Reboot()
+		qdel(world)
 
 /datum/admins/proc/announce()
 	set category = "Special Verbs"
@@ -855,7 +855,7 @@ var/global/log_adminsay = 1
 		return
 	to_chat(world, "\red <b>Rebooting world!</b> \blue Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!")
 	log_admin("[key_name(usr)] initiated an immediate reboot.")
-	world.Reboot()
+	qdel(world)
 
 /datum/admins/proc/unprison(var/mob/M in mob_list)
 	set category = "Admin"
