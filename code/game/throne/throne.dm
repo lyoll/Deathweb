@@ -86,7 +86,7 @@ var/list/riot_essential = list("Baron", "Court Bodyguard", "Charybdis", "Squire"
 		if(H.job == "Jester" && H.special == "jesterdecree")
 			switch(href_list["usecrown"])
 				if("decree")
-					var/input = sanitize(input(usr, "Type your decree.", "Enoch's Gate Decree", "") as message|null)
+					var/input = paranoid_sanitize(input(usr, "Type your decree.", "Enoch's Gate Decree", "") as message|null)
 					if(!input)
 						return
 					if(findtext(input, "http"))
@@ -215,7 +215,7 @@ var/list/riot_essential = list("Baron", "Court Bodyguard", "Charybdis", "Squire"
 						isMeeting = 0
 
 				if("decree")
-					var/input = sanitize(input(usr, "Type your decree.", "Enoch's Gate Decree", "") as message|null)
+					var/input = paranoid_sanitize(input(usr, "Type your decree.", "Enoch's Gate Decree", "") as message|null)
 					if(!input)
 						return
 					if(findtext(input, "http"))
@@ -235,7 +235,7 @@ var/list/riot_essential = list("Baron", "Court Bodyguard", "Charybdis", "Squire"
 						T.announces += input
 
 				if("capture")
-					var/input = sanitize(input(usr, "Type your capture.", "Enoch's Gate Decree", "") as message|null)
+					var/input = paranoid_sanitize(input(usr, "Type your capture.", "Enoch's Gate Decree", "") as message|null)
 					if(!input)
 						return
 					if(findtext(input, "http"))
@@ -247,7 +247,7 @@ var/list/riot_essential = list("Baron", "Court Bodyguard", "Charybdis", "Squire"
 					to_chat(world, "<br>")
 
 				if("execute")
-					var/input = sanitize(input(usr, "Type your execution.", "Enoch's Gate Decree", "") as message|null)
+					var/input = paranoid_sanitize(input(usr, "Type your execution.", "Enoch's Gate Decree", "") as message|null)
 					if(!input)
 						return
 					if(findtext(input, "http"))
@@ -656,7 +656,7 @@ var/roundendready = FALSE
 	set category = "Baron"
 	set name = "Decretodobarao"
 	set desc="Decretar algo."
-	var/input = sanitize(input(usr, "Type your decree.", "Enoch's Gate Decree", "") as message|null, list("\t"="#","ÿ"="&#255;"))
+	var/input = paranoid_sanitize(input(usr, "Type your decree.", "Enoch's Gate Decree", "") as message|null, list("\t"="#","ÿ"="&#255;"))
 	if(!input)
 		return
 	if(findtext(input, "http"))
@@ -681,7 +681,7 @@ var/roundendready = FALSE
 	set desc="Decretar algo."
 	if(fortHand)
 		return
-	var/input = sanitize(input(usr, "Choose your hand, must be their full name.", "Enoch's Gate Decree", "") as message|null)
+	var/input = paranoid_sanitize(input(usr, "Choose your hand, must be their full name.", "Enoch's Gate Decree", "") as message|null)
 	if(!input)
 		return
 	for(var/mob/living/carbon/human/H in mob_list)
